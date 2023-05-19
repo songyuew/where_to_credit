@@ -112,10 +112,9 @@ except Exception:
 
 res = response.json()["value"][0]["value"]["totals"]
 
-print('{:*^{paddingWidth}}'.format("", paddingWidth = paddingWidth))
+print()
 print('{:*^{paddingWidth}}'.format("ITERNARY", paddingWidth = paddingWidth))
 print('{:*^{paddingWidth}}'.format("TICKETED BY " + header["ticketingCarrier"], paddingWidth = paddingWidth))
-print('{:*^{paddingWidth}}'.format("", paddingWidth = paddingWidth))
 
 iternary = BeautifulTable(maxwidth=paddingWidth)
 
@@ -125,9 +124,8 @@ for i in range(segment):
   iternary.rows.append([i+1,a["carrier"],a["operatingCarrier"],a["bookingClass"],f'{a["origin"]} - {a["departureAirportName"]}',f'{a["destination"]} - {a["arrivalAirportName"]}'])
 print(iternary)
 
-print('{:*^{paddingWidth}}'.format("", paddingWidth = paddingWidth))
+print()
 print('{:*^{paddingWidth}}'.format("MILEAGE ACCUMULATION", paddingWidth = paddingWidth))
-print('{:*^{paddingWidth}}'.format("", paddingWidth = paddingWidth))
 
 mileage = BeautifulTable(maxwidth=paddingWidth)
 
